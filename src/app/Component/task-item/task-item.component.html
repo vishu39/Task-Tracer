@@ -1,0 +1,18 @@
+<div [ngClass]="task.reminder ? 'green' : 'red'" class="tasks">
+  <h3>
+    {{ task.text }}
+    <span>
+      <fa-icon
+        [icon]="faTrash"
+        [ngClass]="task.reminder ? 'tickclr' : 'tickclr1'"
+        (click)="onDelete(task)"
+      ></fa-icon>
+      <fa-icon
+        [icon]="faCheck"
+        [ngClass]="task.reminder ? 'tickclr' : 'tickclr1'"
+        (click)="onToggle(task)"
+      ></fa-icon>
+    </span>
+  </h3>
+  <p>{{ task.day }}</p>
+</div>

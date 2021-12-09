@@ -1,0 +1,12 @@
+<header>
+  <h1>Task-Tracer</h1>
+  <app-button
+    [ngStyle]="
+      showAddTask
+        ? { 'background-color': 'red' }
+        : { 'background-color': 'green' }
+    "
+    text="{{ showAddTask ? 'Close' : 'Add' }}"
+    (btnClick)="toggleAddTask()"
+  ></app-button>
+</header>
